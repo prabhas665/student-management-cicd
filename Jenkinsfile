@@ -9,7 +9,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    py -3 -m venv .venv
+                    "C:\\Program Files\\PostgreSQL\\17\\pgAdmin 4\\python\\python.exe" -m venv .venv
                     .venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }
