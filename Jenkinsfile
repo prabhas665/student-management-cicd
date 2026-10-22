@@ -35,7 +35,9 @@ pipeline {
         }
     }
     post {
-        archiveArtifacts artifacts: 'release/**', fingerprint: true
+        always {
+            archiveArtifacts artifacts: 'release/**', fingerprint: true, allowEmptyArchive: true
+        }
         success {
             echo 'SUCCESS: All stages completed.'
         }
