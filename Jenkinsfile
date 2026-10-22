@@ -9,7 +9,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    C:\\Users\\ADMIN\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe -m venv .venv
+                    py -3 -m venv .venv
                     .venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }
